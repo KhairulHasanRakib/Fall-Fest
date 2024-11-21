@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-message">{{ messages[0] }}</div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.email.label }} {{ form.email(size=32) }}<br>
+            {{ form.password.label }} {{ form.password(size=32) }}<br>
+            <button type="submit">Login</button>
+        </form>
+        <a href="{{ url_for('register') }}">Don't have an account? Register</a>
+        <a href="#">Forgot Password?</a>
+    </div>
+</body>
+
+</html>

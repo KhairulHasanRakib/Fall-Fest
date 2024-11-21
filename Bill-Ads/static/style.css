@@ -1,0 +1,140 @@
+/* Base Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Poppins', Arial, sans-serif; /* Premium modern font */
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    background-color: #f5f7fa; /* Soft neutral tone */
+}
+
+body {
+    color: #333; /* Dark neutral text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #e4ebf5); /* Subtle gradient */
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 480px; /* Standardized width */
+    background-color: #ffffff; /* Crisp white background */
+    border-radius: 16px; /* Elegant rounded corners */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1); /* Elevated shadow */
+    padding: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Subtle hover lift */
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    font-size: 1.75rem; /* Enhanced size */
+    font-weight: 700;
+    color: #1d3557; /* Modern navy tone */
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent vertical spacing */
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 15px;
+    font-size: 1rem; /* Comfortable size */
+    border: 1px solid #cfd8dc; /* Subtle border */
+    border-radius: 8px; /* Soft rounded edges */
+    background-color: #f9fbfc; /* Light fill for inputs */
+    transition: all 0.3s ease; /* Smooth animations */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #457b9d; /* Highlight with a modern tone */
+    box-shadow: 0 0 6px rgba(69, 123, 157, 0.4); /* Glow effect */
+    background-color: #ffffff; /* Clean on focus */
+    outline: none; /* Remove native outline */
+}
+
+/* Button Styles */
+button {
+    padding: 15px;
+    font-size: 1.125rem; /* Larger for prominence */
+    font-weight: 600; /* Bold for emphasis */
+    color: #ffffff; /* High contrast */
+    background: linear-gradient(90deg, #457b9d, #1d3557); /* Gradient button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover animations */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #1d3557, #457b9d); /* Reverse gradient */
+    transform: scale(1.05); /* Slight growth */
+    box-shadow: 0 6px 16px rgba(69, 123, 157, 0.4); /* Glow effect */
+}
+
+button:active {
+    transform: scale(1); /* Reset on click */
+    box-shadow: 0 4px 12px rgba(69, 123, 157, 0.2);
+}
+
+/* Link Styles */
+a {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #1d3557; /* Navy tone */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #457b9d; /* Lighter navy on hover */
+    text-decoration: underline;
+}
+
+/* Error/Alert Message Styles */
+.flash-message {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #e63946; /* Vibrant red for errors */
+    margin-top: -15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
